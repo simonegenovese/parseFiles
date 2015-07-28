@@ -11,14 +11,9 @@
 class FileParser {
 
 public:
-    FileParser(const dirent *pDirent);
-
+    FileParser(dirent *pDirent);
     void parse();
 };
 
 #endif //LISTFILES_FILEPARSER_H
-
-long FileParser(const dirent *pDirent) {
-    return 0;
-}
 

@@ -7,7 +7,7 @@
 
 dirent *localFile;
 
-FileParser::FileParser(const dirent *pDirent) {
+FileParser::FileParser(dirent *pDirent) {
     localFile = pDirent;
 }
 
@@ -15,3 +15,6 @@ void parse(){
     printf ("%s\n", localFile->d_name);
 }
 
+void FileParser::parse() {
+    printf ("%s\n", localFile->d_name);
+}

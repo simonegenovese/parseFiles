@@ -2,7 +2,12 @@
 #include <dirent.h>
 #include "FileParser.h"
 
-void faQualcosaConIlFile(const dirent *ent);
+
+void faQualcosaConIlFile(dirent *ent) {
+    FileParser *parser = new FileParser(ent);
+    parser->parse();
+    delete parser;
+}
 
 using namespace std;
 
@@ -23,11 +28,6 @@ int main() {
         return EXIT_FAILURE;
     }
 
-    cout << "Hello, World!" << endl;
+    cout << "Fine!" << endl;
     return 0;
-}
-
-void faQualcosaConIlFile(const dirent *ent) {
-    FileParser *parser = new FileParser(ent);
-    parser->parse();
 }
